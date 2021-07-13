@@ -6,7 +6,7 @@ You can find the paper via http://cs.brown.edu/people/pfelzens/papers/seg-ijcv.p
 The authors also implement the alorithm in C++ and you can find it via http://cs.brown.edu/people/pfelzens/segment/
 
 ## Highlight
-1. The algorithm can capture important non-local properties
+1. The algorithm can capture important **non-local properties**
 2. The algorithm is computationally efficient - running in O(nlogn) for n image pixels
 
 
@@ -17,10 +17,9 @@ In this part, I will illustrate authors' idea and notation :monocle_face:
 **Non-local image characteristic** 
 
 
-<img src="img/synthetic_foto.PNG" >
-
-Consider the image shown in the top left of Fig. 1. 
-Most people will say that this image has **three distinct regions**: 
+<img src="img/synthetic_foto.png" >
+ 
+Most people will say that this image(shown above) has **three distinct regions**: 
 - a rectangularshaped intensity ramp in the left half **(Region 1)**
 - a constant intensity region with a hole on the right half **(Region 2)**
 - a high-variability rectangular region inside the constant region **(Region 3)**
