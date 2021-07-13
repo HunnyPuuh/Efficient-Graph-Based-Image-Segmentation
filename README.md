@@ -5,15 +5,19 @@ You can find the paper via http://cs.brown.edu/people/pfelzens/papers/seg-ijcv.p
 
 The authors also implement the alorithm in C++ and you can find it via http://cs.brown.edu/people/pfelzens/segment/
 
+## Highlight
+1. The algorithm can capture important non-local properties
+2. The algorithm is computationally efficient - running in O(nlogn) for n image pixels
+
+
 ## Paper knowledge
 In this part, I will illustrate authors' idea and notation :monocle_face:
 
 
-**Non-local image characteristic** captured by this segmentation method
+**Non-local image characteristic** 
 
 
 <img src="img/synthetic_foto.PNG" >
-Let's us now disregard the two hyperparameters &sigma and k now, which will be explained later 
 
 Consider the image shown in the top left of Fig. 1. 
 Most people will say that this image has **three distinct regions**: 
@@ -34,4 +38,36 @@ that capture certain global properties which are derived below and whose consequ
 **Graph-based segmentation**
 
 ## Code details
-<img src="img/eq1.png" > represents an undirected graph with vertices 
+<img src="img/eq1.png" > represents an undirected graph with vertices and eges
+
+In the image segmentation
+
+For vertices <img src="img/eq2.png" >,  they are pixels
+
+For egdes <img src="img/eq3.png" >, it is pairs of neighboring vertices. 
+Each edge has a corresponding weight <img src="img/eq4.png" > , which is non-negative measure of dissimilarity between neighboring <img src="img/eq5.png" > and <img src="img/eq6.png" >. In terms of definition of weight function, it could be the difference in intensity, color, motion, location or some other local attribute
+
+A segmentation *S* is a partition of vertices into components such that each components(or region) and  
+
+in general we want the elements in a component to be similar,and elements in different components to be dissimilar.
+This means that edges between two vertices in the same component should have relatively low weights, and edges between vertices in different components should have higher weights.
+
+PredicateD, for evaluating
+whether or not there is evidence for a boundary between
+two components in a segmentation (two regions
+of an image)
+Internal difference:it measures difference within one component
+
+
+
+External difference: it measures difference between two components
+
+Graph regresentation
+In this paper, the authors adopts the 8
+
+
+Overall flow：
+Input imgae -> gaussian filter ->  predicate
+
+
+
