@@ -122,7 +122,13 @@ Process:
    Let v<sub>i</sub> and v<sub>j</sub> denote the vertices connected by the q-th edge in the ordering, i.e., o<sub>q</sub> = (v<sub>i</sub>, v<sub>j</sub> ).
 
    If v<sub>i</sub> and v<sub>j</sub> are in disjoint components of S<sup>q-1</sup> and w(o<sub>q</sub> ) is small compared to the internal difference of both those components,       then merge the two components
+   
    otherwise do nothing.
+   
+   To formulate it in math way:
+   
+   
+   
 
 Overall flow：
 Input imgae -> gaussian filter ->  predicate
