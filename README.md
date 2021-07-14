@@ -75,16 +75,33 @@ In the extreme case, if one component contains only one vertice(i.e single pixel
 
 If there is no edge connneting C1 and C2, then  <img src="img/eq12.png" >
 
+Based on two definitions above, we further define **Boundary threshold**
 
 **Boundary threshold**
 
-<img src="img/eq12.png" >
+<img src="img/eq13.png" >
+
+Where the minimum internal difference,MInt, is defined as 
 
 
+<img src="img/eq14.png" >
 
 
+In summary, the overall idea is if external difference is larger than the internal difference, then boudary can be formed
 
-## Code details
+Note: The threshold function τ controls the degree to which external difference must be greater than their internal differences 
+in order for there to be evidence of a boundary between them (D to be true).
+
+The reason why we have this threshold function τ is explained as follows:
+For small components(which means component includes few vertices), using Int(C) is not a good estimate of the local characteristics of the data
+In the extreme case,when |C| = 1, Int(C) = 0. Then the internal difference is samll and helps to form the boundary and may lead to multiple components, which may in essence
+can be included in one component.
+
+Therefore, we use a threshold function based on the size of the component, τ (C) = k/|C|, where |C| denotes the size of C, and k is some constant parameter(hyperparameter)
+That is, for small components we require stronger evidence for a boundary. A larger k causes a preference for larger components. Note, however, that k is not a minimum component size. Smaller components are allowed when there is a sufficiently large difference between neighboring components.
+
+## Algorithm and its properties
+
 
 
 
