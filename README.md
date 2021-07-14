@@ -101,9 +101,25 @@ Therefore, we use a threshold function based on the size of the component, τ (C
 That is, for small components we require stronger evidence for a boundary. A larger k causes a preference for larger components. Note, however, that k is not a minimum component size. Smaller components are allowed when there is a sufficiently large difference between neighboring components.
 
 ## Algorithm and its properties
+First, introduce the algorithm process 
 
+Input: <img src="img/eq5.png" > with n vertices and m edges
 
+Output: a segmentation of V into components <img src="img/eq16.png" >
 
+Process:
+
+1. Sort E into π=(O<sub>1</sub>,...O<sub>m</sub>) by non-decreasing edge weight.
+2. Start with a segmentation S<sup>0</sup>, where each vertex v<sub>i</sub> is in its own component. (Initialization)
+
+(For clarity, we notice there is superscript of 0 on S. Because the whole process is iterative, the superscript indicates the ith updates of S after considering ith edges)
+
+<img src="img/eq5.png" >
+
+3. Repeat step 4 for q=1,2,...m, which means considering each edge 
+4. Construct S<sup>q</sup> given S<sup>q-1</sup> as follows.
+
+Let v
 
 Overall flow：
 Input imgae -> gaussian filter ->  predicate
