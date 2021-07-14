@@ -117,9 +117,8 @@ Process:
 <img src="img/eq5.png" >
 
 3. Repeat step 4 for q=1,2,...m, which means considering each edge 
-4. Construct S<sup>q</sup> given S<sup>q-1</sup> as follows.
-
-Let v
+4. Construct S<sup>q</sup> given S<sup>q-1</sup> as follows.(it means that the segmentation evolve iteratively)
+   Let v<sub>i</sub> and v<sub>j</sub>denote the vertices connected by the q-th edge in the ordering, i.e., o<sub>q</sub> = (v<sub>i</sub>, v<sub>j</sub> ).
 
 Overall flow：
 Input imgae -> gaussian filter ->  predicate
