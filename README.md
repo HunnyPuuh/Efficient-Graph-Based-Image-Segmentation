@@ -11,7 +11,6 @@ The authors also implement the alorithm in C++ and you can find it via http://cs
 
 
 ## Paper knowledge
-In this part, I will illustrate authors' idea and notation :monocle_face:
 
 
 **Non-local image characteristic** 
