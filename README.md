@@ -127,6 +127,20 @@ Process:
    
    To formulate it in math way:
    
+   Let <img src="img/eq17.png" > be the component of S<sup>q-1</sup> containing v<sub>i</sub> and  <img src="img/eq18.png" > be the component containing v<sub>j</sub>
+   
+   if <img src="img/eq19.png" > and <img src="img/eq20.png" >, 
+   
+   then S<sup>q</sup> is obtained from  S<sup>q-1</sup> by merging <img src="img/eq17.png" > and <img src="img/eq18.png" >
+   
+   Otherwise, S<sup>q</sup> = S<sup>q-1</sup>
+   
+   (Currently, the status is S<sup>q-1</sup> and   )
+   
+   
+   
+ 4. Return S=S<sup>m</sup>
+   
    
    
 
