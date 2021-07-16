@@ -155,7 +155,11 @@ In order to define the complementary notion of what it means for a segmentation 
 we first introduce the notion of a **refinement** of a segmentation.
 
 Given two segmentations S and T of the same base set, we say that T is a **refinement** of S when each component of T is contained in (or equal to) some component of S.
- 
+
+In addition(add one more constraint), we say that T is a **proper** refinement of S when T ≠ S. 
+Note that if T is a proper refinement of S, then T can be obtained by splitting one or more regions of S. When T is a proper refinement of S we say that T is finer than
+S and that S is coarser than T.
+
  
  
  
