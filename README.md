@@ -125,6 +125,8 @@ Process:
    
    otherwise do nothing.
    
+   (Note: in terms of the merging criterion, basically it uses **boundary threshold**)
+   
    To formulate it in math way:
    
    Let <img src="img/eq17.png" > be the component of S<sup>q-1</sup> containing v<sub>i</sub> and  <img src="img/eq18.png" > be the component containing v<sub>j</sub>
@@ -142,7 +144,23 @@ Process:
  4. Return S=S<sup>m</sup>
    
    
-   
+ Then, let's focus on the algorithm property
+ 
+ Definition 1. A segmentation S is **too fine** if there is some pair of regions C<sub>1</sub>,C<sub>2</sub> ∈ S for which there is no evidence for a boundary between them.
+ 
+ (it means that the condition for **boundary threshold** is not satisfied)
+ 
+In order to define the complementary notion of what it means for a segmentation to be too coarse (to have too few components), 
+
+we first introduce the notion of a **refinement** of a segmentation.
+
+Given two segmentations S and T of the same base set, we say that T is a **refinement** of S when each component of T is contained in (or equal to) some component of S.
+ 
+ 
+ 
+ 
+ 
+ 
 
 Overall flow：
 Input imgae -> gaussian filter ->  predicate
