@@ -102,11 +102,11 @@ That is, for small components we require stronger evidence for a boundary. A lar
 
 ## Algorithm and its properties
 
-The algorithm is closely related to Kruskal’s algorithm for constructing a minimum spanning tree of a graph (cf. Cormen et al.,
+The segmentation algorithm is closely related to Kruskal’s algorithm for constructing a minimum spanning tree of a graph (cf. Cormen et al.,
 1990). It can be implemented to run in O(m logm) time, where m is the number of edges in the graph.
 
 
-First, introduce the algorithm process 
+First, introduce the segmentation algorithm process 
 
 Input: <img src="img/eq5.png" > with n vertices and m edges
 
@@ -199,8 +199,9 @@ Thus no additional merges will happen to this component, i.e., C<sub>i</sub> =<i
 The case for <img src="img/eq23.png" > is analogous.
 
 
+Theorem 1.The segmentation S produced by Segmentation Algorithm is not too fine according to Definition 1, using the boundary threshold
 
-
+Proof:By definition, in order for S to be too fine there is some pair of components for which the boundary threshold does not hold.
 
 Overall flow：
 Input imgae -> gaussian filter ->  predicate
