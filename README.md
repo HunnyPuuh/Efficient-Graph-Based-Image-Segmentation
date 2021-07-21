@@ -189,9 +189,11 @@ Let <img src="img/eq17.png" > and <img src="img/eq18.png" > denote the two compo
 when this edge is considered by the algorithm. (Result:)Then either C<sub>i</sub> = <img src="img/eq17.png" >  or C<sub>j</sub> = <img src="img/eq18.png" > , 
 where C<sub>i</sub> is the component containing v<sub>i</sub> and C<sub>j</sub>is the component containing v<sub>j</sub> in the final segmentation S.
 
-Note: this means that if two components fail to merge, then one of two components will remain unchanged to the end.
+Note: this means that if two components fail to merge（i.e. there is a boundary）, then one of two components will remain unchanged to the end.
 
-Proof: There are two cases in which the merging will not happen. Say it is <img src="img/eq21.png" > 
+Proof: There are two cases in which the merging will not happen,meaning that <img src="img/eq24.png" > 
+
+Say it is <img src="img/eq21.png" > 
 Since edges are considered in non-decreasing weight order,<img src="img/eq22.png" > for all k ≥ q + 1.
 Thus no additional merges will happen to this component, i.e., C<sub>i</sub> =<img src="img/eq17.png" >. 
 The case for <img src="img/eq23.png" > is analogous.
