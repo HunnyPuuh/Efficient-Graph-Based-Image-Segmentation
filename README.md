@@ -101,6 +101,11 @@ Therefore, we use a threshold function based on the size of the component, τ (C
 That is, for small components we require stronger evidence for a boundary. A larger k causes a preference for larger components. Note, however, that k is not a minimum component size. Smaller components are allowed when there is a sufficiently large difference between neighboring components.
 
 ## Algorithm and its properties
+
+The algorithm is closely related to Kruskal’s algorithm for constructing a minimum spanning tree of a graph (cf. Cormen et al.,
+1990). It can be implemented to run in O(m logm) time, where m is the number of edges in the graph.
+
+
 First, introduce the algorithm process 
 
 Input: <img src="img/eq5.png" > with n vertices and m edges
@@ -156,13 +161,27 @@ we first introduce the notion of a **refinement** of a segmentation.
 
 Given two segmentations S and T of the same base set, we say that T is a **refinement** of S when each component of T is contained in (or equal to) some component of S.
 
-In addition(add one more constraint), we say that T is a **proper** refinement of S when T ≠ S. 
-Note that if T is a proper refinement of S, then T can be obtained by splitting one or more regions of S. When T is a proper refinement of S we say that T is finer than
+In addition(**add one more constraint**), we say that T is a **proper** refinement of S when T ≠ S. 
+Note that if T is a proper refinement of S, then T can be obtained by splitting one or more regions of S. When T is a **proper** refinement of S we say that T is finer than
 S and that S is coarser than T.
 
+Definition 2.A segmentation S is too coarse when there exists a proper refinement of S that is not too fine.
  
+Notice: from definition 2, if regions of a segmentation can be further split according to the **boundary threshold**, then the initial segmentation has too few regions.
+
+First we note that in general there can be more than one segmentation that is neither too coarse nor too fine, so such a segmentation is not unique.On the question of existence, there is always some segmentation that is both not too coarse and not too fine.
+
+Property 1. For any (finite) graph G = (V, E) there exists some segmentation S that is neither too coarse nor too fine.
+
+Proof: Consider the segmentation where all the elements are in a single component. Clearly this segmentation is not too fine, because there is only one component. 
+If the segmentation is also not too coarse we are done. 
+Otherwise, by the definition of "too coarse" there is a proper refinement that is not too fine. Pick one of those refinements and keep repeating this procedure
+until we obtain a segmentation that is not too coarse.
+The procedure can only go on for n − 1 steps because whenever we pick a proper refinement we increase the number of components in the segmentation by at least
+one, and the finest segmentation we can get is the one where every element is in its own component.(n should be the # of vertices)
+
  
- 
+
  
  
 
