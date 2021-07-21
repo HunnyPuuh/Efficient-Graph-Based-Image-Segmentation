@@ -205,7 +205,9 @@ Proof:By definition, in order for S to be too fine there is some pair of compone
 a pair of components that was considered in Step 4 and did not cause a merge.
 
 Let o<sub>q</sub> = (v<sub>i</sub>, v<sub>j</sub>) be the first such edge in the ordering. 
-In this case the algorithm decided not to merge <img src="img/eq17.png" > with <img src="img/eq18.png" > which 
+In this case the algorithm decided not to merge <img src="img/eq17.png" > with <img src="img/eq18.png" > which implies <img src="img/eq25.png" >
+
+
 
 
 
