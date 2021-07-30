@@ -207,6 +207,8 @@ In the paper, the authors consider neighbors in an 8-connected sense.Please see 
 Before implementing the segmentation, the authors use a Gaussian filter to smooth the image slightly before computing the edge weights, in order to compensate
 for digitization artifacts. They use a Gaussian with σ = 0.8, which does not produce any visible change to the image but helps remove artifacts.
 
+##edge computation
+
 
 Overall flow：
 Input imgae -> gaussian filter ->  predicate
