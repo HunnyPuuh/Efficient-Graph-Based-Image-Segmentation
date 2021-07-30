@@ -199,15 +199,6 @@ Thus no additional merges will happen to this component, i.e., C<sub>i</sub> =<i
 The case for <img src="img/eq23.png" > is analogous.
 
 
-Theorem 1.The segmentation S produced by Segmentation Algorithm is not too fine according to Definition 1, using the boundary threshold
-
-Proof:By definition, in order for S to be too fine there is some pair of components for which the boundary threshold is false.There must be at least one edge between such
-a pair of components that was considered in Step 4 and did not cause a merge.
-
-Let o<sub>q</sub> = (v<sub>i</sub>, v<sub>j</sub>) be the first such edge in the ordering. 
-In this case the algorithm decided not to merge <img src="img/eq17.png" > with <img src="img/eq18.png" > which implies <img src="img/eq25.png" >
-By Lemma 1 we know that either C<sub>i</sub> =<img src="img/eq17.png" > or C<sub>j</sub> =<img src="img/eq18.png" >.
-Either way we see that ,implying that boundary threshold is true,which is a contradiction
 
 
 
